@@ -56,7 +56,7 @@ public class RegisterFragment extends Fragment {
                     case R.id.radMale:
                         genderString = "Male";
                         break;
-                    case R.id.radFemale;
+                    case R.id.radFemale:
                         genderString = "Female";
                         break;
 
@@ -103,9 +103,25 @@ public class RegisterFragment extends Fragment {
             myAlert.normaAlDialog("No Gender", "Plase Choose Gender");
         } else {
 
-            
+            try {
 
-        }
+                MyConstant myConstant = new MyConstant();
+                AddUserThread addUserThread = new AddUserThread(getActivity());
+                addUserThread.execute(name, user, password, genderString, myConstant.getUrlAddUser());
+
+                String result = addUserThread.get();
+                if (Boolean.parseBoolean(result)) {
+                    getActivity().getSupportFragmentManager().popBackStack();
+
+                } else {
+                    myAlert.normaAlDialog("Cannot Register", "Please Try Again");
+                }
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+        } // if
 
     }
 
