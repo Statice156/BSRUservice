@@ -12,7 +12,7 @@ public class MyAlert {
         this.context = context;
     }
 
-    public void normaAlDialog(String title,String message){
+    public void normalDialog(String title,String message){
 
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle(title);

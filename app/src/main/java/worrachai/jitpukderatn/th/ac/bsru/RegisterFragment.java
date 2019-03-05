@@ -98,9 +98,9 @@ public class RegisterFragment extends Fragment {
 
         if (name.isEmpty() || user.isEmpty() || password.isEmpty()) {
 //            have space
-            myAlert.normaAlDialog("Have Space", "Plase Fill All Blank");
+            myAlert.normalDialog("Have Space", "Plase Fill All Blank");
         } else if (aBoolean) {
-            myAlert.normaAlDialog("No Gender", "Plase Choose Gender");
+            myAlert.normalDialog("No Gender", "Plase Choose Gender");
         } else {
 
             try {
@@ -114,7 +114,7 @@ public class RegisterFragment extends Fragment {
                     getActivity().getSupportFragmentManager().popBackStack();
 
                 } else {
-                    myAlert.normaAlDialog("Cannot Register", "Please Try Again");
+                    myAlert.normalDialog("Cannot Register", "Please Try Again");
                 }
 
             } catch (Exception e) {

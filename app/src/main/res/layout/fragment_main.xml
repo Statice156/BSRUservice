@@ -21,6 +21,8 @@
 
         <!--User-->
         <EditText
+            android:id="@+id/edtUser"
+            android:background="@drawable/user"
             android:inputType="text"
             android:hint="User :"
             android:layout_width="match_parent"
@@ -28,6 +30,8 @@
 
         <!--Password-->
         <EditText
+            android:id="@+id/edtPassword"
+            android:background="@drawable/user"
             android:inputType="textPassword"
             android:hint="Password :"
             android:layout_width="match_parent"
@@ -35,7 +39,10 @@
 
         <!--Login-->
         <Button
-            android:hint="Login"
+            android:id="@+id/btnLogin"
+            android:textColor="#ffffff"
+            android:background="@drawable/login"
+            android:text="Login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
